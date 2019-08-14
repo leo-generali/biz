@@ -4,4 +4,18 @@ layout: base.njk
 
 {% from 'macros/rainbow.njk' import rainbow %}
 
-{{ rainbow('Hello world!') }}
+<section class='intro'>
+  <div class='intro__hello'>
+    <img src='img/rotating-pc.gif' />
+      {{ rainbow('Hey there!') }}
+    <img src='img/rotating-pc.gif' />
+  </div>
+  <div class='intro__text'>
+    <h2 class='text-center color-yellow'>I'm Leo, a Serious Web Developer™</h2>
+    <div class='text-center'>
+      <img src='img/dancing-baby.gif' />
+    </div>
+    <p>I'm currently working over at The Knot Worldwide where I build tools that connect wedding vendors and soon to be married couples.</p>
+  </div>  
+</section>
+{% include 'partials/thanks-for-visiting.njk' %}

@@ -1,0 +1,5 @@
+$colors: ("white": #ffffff, "yellow": #ffff00)
+
+@each $color, $hex in $colors
+  .color-#{$color}
+    color: $hex
