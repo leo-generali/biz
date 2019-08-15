@@ -72,6 +72,40 @@ $sonic-run-length: 5s
     bottom: -2.8rem
     filter: invert(100%)
 
+.guest-book
+  &__lightsaber
+    width: 100%
+    &--opposite
+      transform: scaleX(-1)
+  &__container 
+    padding: 3rem
+    margin-top: 8rem
+    color: #070707
+    background: #bfbfbf
+    border: 1px solid
+    border-top-color: #dfdfdf
+    border-left-color: #dfdfdf
+    border-right-color: #808080
+    border-bottom-color: #808080
+    box-shadow: 1px 1px 0 0 #000
+  &__message 
+    margin-bottom: 4rem
+    position: relative
+    &:after
+      position: absolute
+      content: ''
+      width: 90%
+      background-color: darken(#bfbfbf, 15%)
+      height: 0.2rem
+      left: 5%
+      bottom: -2.1rem
+    &:last-child 
+      margin-bottom: 0
+      &:after
+        content: none
+    p 
+      margin-bottom: 0
+
 .counter
   margin-top: 4rem
   &__number

@@ -6,7 +6,7 @@ layout: base.njk
 {% from 'macros/strava-text.njk' import stravaText %}
 
 <section class='intro'>
-  <div class="container">
+  <div class='container'>
     <div class='intro__hello'>
       <img src='img/rotating-pc.gif' />
         {{ waveText('Hey there!', 'h1', 'rainbow') }}
@@ -22,7 +22,7 @@ layout: base.njk
   </div>
 </section>
 <section class=''>
-  <div class="container">
+  <div class='container'>
     <p>I really like to run! I post all of my runs on <a target='_blank' href='{{ strava.profileUrl }}' class='color-strava color-strava--link'>Strava dot com</a>. You can check out my latest run by clicking this cool running man (or you can click <a target='_blank' href='{{ strava.activityUrl }}' class='color-strava color-strava--link'>here too</a>):</p>
     <div class='strava'>
       <a target='_blank' href='{{ strava.activityUrl }}'><img src='img/running.gif' /></a>
@@ -37,6 +37,21 @@ layout: base.njk
   <div class='container'>
     <div class='fun-facts__sonic'>
       <img src='img/sonic.gif' />
+    </div>
+  </div>
+</section>
+<section class='guest-book'>
+  <div class='container'>
+    <img class='guest-book__lightsaber' src='img/lightsaber.gif'>
+    <h1 class='text-center'>The Guestbook!</h1>
+    <img class='guest-book__lightsaber guest-book__lightsaber--opposite' src='img/lightsaber.gif'>
+    <div class='guest-book__container'>
+      {% for entry in guestbook %}
+        <div class='guest-book__message'>
+          <p><strong class='color-white'>Message:</strong> {{ entry.message }}</p>
+          <p><strong class='color-white'>Author:</strong> {{ entry.author }}</p>
+        </div>
+      {% endfor %}
     </div>
   </div>
 </section>
