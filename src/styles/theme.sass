@@ -4,7 +4,6 @@
 @import 'colors'
 @import 'wave-animation'
 @import 'button'
-@import 'anchor'
 
 .intro
   &__hello
@@ -22,13 +21,24 @@
 .strava
   display: flex
   align-items: center
-  justify-content: space-between;
+  justify-content: space-between
   &__small
     font-size: 1.4rem
-  p
-    margin: 0
-  span
     color: grey
+  p
+    margin-bottom: 0
+
+.counter
+  margin-top: 4rem
+  &__number
+    display: flex
+    align-items: center
+    justify-content: center
+    img
+      width: 3rem
+      height: auto
+  p
+    margin-bottom: 0;
 
 .thanks-for-visiting
   display: flex

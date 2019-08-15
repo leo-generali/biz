@@ -1,0 +1,11 @@
+{% macro waveText(string, element, type) %}
+  <div class="wave-text {% if type === 'rainbow' %} rainbow-text {% endif %}">
+    {% for letter in string %}
+      {% if letter === ' ' %} 
+        <{{element}}>&nbsp;</{{element}}>
+      {% else %}
+        <{{element}}>{{ letter }}</{{element}}>
+      {% endif %}
+    {% endfor %}
+  </div>
+{% endmacro %}
