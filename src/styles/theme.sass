@@ -3,8 +3,17 @@
 @import 'utils'
 @import 'colors'
 @import 'wave-animation'
+@import 'sonic-animation'
 @import 'button'
 
+$sonic-run-length: 5s
+
+.container
+  margin: 0 auto
+  max-width: 70rem
+  width: 100%
+  padding: 4rem 2rem
+  
 .intro
   &__hello
     display: flex
@@ -27,6 +36,43 @@
     color: grey
   p
     margin-bottom: 0
+
+.fun-facts
+  background: rgb(255,45,0);
+  background: linear-gradient(180deg, rgba(255,45,0,1) 0%, rgba(255,101,0,1) 21.5%, rgba(255,164,0,1) 42.5%, rgba(255,240,1,1) 65%, rgba(4,224,255,1) 65%, rgba(1,180,255,1) 74%, rgba(0,141,255,1) 92%, rgba(0,56,255,1) 100%);
+  width: 100%
+  height: 360px
+  position: relative
+  .container 
+    overflow: hidden;
+  &__sonic
+    width: 100%
+    animation-duration: $sonic-run-length
+    animation-name: sonic
+    animation-iteration-count: infinite
+    animation-direction: alternate
+    animation-timing-function: linear
+    img
+      animation-duration: $sonic-run-length * 2
+      animation-name: sonic-flip
+      animation-iteration-count: infinite
+      animation-timing-function: linear
+  &:before
+    content: ''
+    background-image: url(img/flame-bg.gif)
+    height: 4.2rem;
+    width: 100%
+    position: absolute
+    top: -2.8rem;
+  &:after
+    transform: scaleY(-1)
+    content: ''
+    background-image: url(img/flame-bg.gif)
+    height: 4.2rem;
+    width: 100%
+    position: absolute
+    bottom: -2.8rem;
+    filter: invert(100%)
 
 .counter
   margin-top: 4rem
