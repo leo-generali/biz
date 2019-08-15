@@ -1,5 +1,8 @@
-$colors: ("white": #ffffff, "yellow": #ffff00)
+$colors: ("white": #ffffff, "yellow": #ffff00, "strava": #FC6100)
 
 @each $color, $hex in $colors
   .color-#{$color}
     color: $hex
+  .color-#{$color}--link
+    &:hover
+      color: darken($hex, 10%)

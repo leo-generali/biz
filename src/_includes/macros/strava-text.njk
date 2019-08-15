@@ -1,0 +1,6 @@
+{% macro stravaText(distance) %}
+  {% if distance < 4 %}I had a short run! I ran {{ distance }} miles!{% endif %}
+  {% if distance < 7 %}Oooo a medium run! I last ran {{ distance }} miles!{% endif %}
+  {% if distance < 10 %}Now we're cooking with gas! I ended up running {{ distance }} miles!{% endif %}
+  {% if distance >= 10 %}I had a really long run! I ran {{ distance }} miles!{% endif %}
+{% endmacro %}

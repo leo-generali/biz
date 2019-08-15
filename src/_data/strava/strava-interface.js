@@ -74,8 +74,9 @@ class StravaInterface {
       distance.substring(0, distance.length - 3)
     );
     const distanceKm = getKm(distanceMiles);
-    const url = `https://www.strava.com/activities/${id}`;
-    return { distanceMiles, distanceKm, url };
+    const activityUrl = `https://www.strava.com/activities/${id}`;
+    const profileUrl = `https://www.strava.com/athletes/${ATHLETE_ID}`;
+    return { distanceMiles, distanceKm, activityUrl, profileUrl };
   }
 }
 

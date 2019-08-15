@@ -3,6 +3,7 @@ layout: base.njk
 ---
 
 {% from 'macros/rainbow.njk' import rainbow %}
+{% from 'macros/strava-text.njk' import stravaText %}
 
 <section class='intro'>
   <div class='intro__hello'>
@@ -16,7 +17,16 @@ layout: base.njk
       <img src='img/dancing-baby.gif' />
     </div>
     <p>I'm currently working over at The Knot Worldwide where I build tools that connect wedding vendors and soon to be married couples.</p>
-    {{ strava.distance }}
-  </div>  
+  </div>
+  <div class='intro__text'>
+    <p>I really like to run! I post all of my runs on <a target='_blank' href='{{ strava.profileUrl }}' class='color-strava color-strava--link'>Strava dot com</a>. You can check out my latest run by clicking this cool running man (or you can click <a target='_blank' href='{{ strava.activityUrl }}' class='color-strava color-strava--link'>here too</a>):</p>
+    <div class='strava'>
+      <a target='_blank' href='{{ strava.activityUrl }}'><img src='img/running.gif' /></a>
+      <div>
+        <p>{{ stravaText(strava.distanceMiles) }}</p>
+        <p class='strava__small'>(That's {{ strava.distanceKm }} kilometers for you metric system heads out there.)</p>
+      </div>
+    </div>
+  </div>
 </section>
 {% include 'partials/thanks-for-visiting.njk' %}
