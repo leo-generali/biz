@@ -9,7 +9,7 @@
     "eleventy": "^0.2.0",
     "flat-cache": "^2.0.1",
     "html-minifier": "^4.0.0",
-    "node-sass": "^4.12.0"
+    "node-sass": "^4.13.1"
   },
   "scripts": {
     "dev": "ELEVENTY_ENV=development eleventy --serve",
